@@ -5,13 +5,11 @@ main {
 body{
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  ;
 
   }
 
 .wrapper {
   height: 95vh;
-  width: 95vw;
   gap: 20rem;
   background: '';
   display: flex;
@@ -21,27 +19,10 @@ body{
   
 }
 
-.hide{
-  visibility: hidden;
-  
-}
 
-.box {
-  height: 150pt;
-  width: 150pt;
-  background-color: rgb(223, 205, 206);
-  display: flex;
-  position: absolute;
-  margin-left: 200px;
-  border-radius: 5px;
-  z-index: 90;
-  padding: 20px;
-  visibility: hidden
-  
 
-}
+
 .container {
-  position: relative;
   display: grid;
   grid-template-areas:
     "a a b b"
@@ -52,6 +33,7 @@ body{
 
   grid-gap: 25px;
   padding: 25px;
+  margin-top: 70px;
   background: white;
   border-radius: 20px;
   cursor: pointer;
@@ -131,8 +113,8 @@ body{
   display: flex;
   position: fixed;
   bottom: 0;
-  right: calc(-29px);
-  margin-bottom: 10px;
+  right: calc(-20px);
+  margin-bottom: 40px;
 }
 .flower2 {
   display: flex;
@@ -144,9 +126,10 @@ body{
 
 .title-wrap {
   display: flex;
-  
-  position: absolute;
   z-index: 99;
+  position: fixed;
+  top: 0
+  
   
 }
 
@@ -160,7 +143,7 @@ body{
   overflow-y: hidden;
   padding-inline: 50px;
   padding: 20px;
-  gap: 1rem;
+  gap: 0.78rem;
   z-index: 99;
   will-change: pathLength;
 }

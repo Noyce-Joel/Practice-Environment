@@ -4,6 +4,7 @@ import Flower from "components/Flower.jsx";
 import Title from "components/Title";
 
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+import HomePhotos from "../../components/HomePhotos";
 
 export default function Home() {
   
@@ -17,18 +18,19 @@ export default function Home() {
       </Head>
       <Title />
       <Flower />
-      <Parallax>
+     
       <HomePage />
+      <HomePhotos />
       <HomePage />
+      <HomePhotos />
       <HomePage />
+      <HomePhotos />
       <HomePage />
+      <HomePhotos />
       <HomePage />
-      <HomePage />
-      <HomePage />
-      <HomePage />
-      <HomePage />
-      <HomePage />
-      </Parallax>
+      <HomePhotos />
+      
+     
      
     </>
   );

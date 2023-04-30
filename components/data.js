@@ -1,5 +1,5 @@
-// Gradients taken from: https://webgradients.com/
-export default [
+
+ const colors = [
   {
     name: 'Rare Wind',
     description: '#a8edea → #fed6e3',
@@ -75,3 +75,4 @@ export default [
   },
   
 ]
+export default colors

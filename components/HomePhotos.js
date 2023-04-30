@@ -14,16 +14,16 @@ import {
 } from "framer-motion";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 
-function HomePage() {
+function HomePhotos() {
   const [open, setOpen] = useState(false);
     const [show, setShow] = useState(true)
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.stiff,
-    from: { x: -125, size: "40%", background: "rgb(168, 117, 117)" },
+    from: { x: 125, size: "40%", background: "rgb(168, 117, 117)" },
     to: {
-      x: open ? 0 : -125,
+      x: open ? 0 : 125,
       size: open ? "92%" : "40%",
       background: open ? "white" : "rgb(168, 117, 117)",
     },
@@ -83,4 +83,4 @@ function HomePage() {
     </motion.div>
   );
 }
-export default HomePage;
+export default HomePhotos;
