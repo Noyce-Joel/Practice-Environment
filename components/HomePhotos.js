@@ -51,7 +51,7 @@ function HomePhotos() {
       to: {
         scale: 1,
       },
-      config: { tension: 210, friction: 150, mass: 25 },
+      config: { tension: 210, friction: 100, mass: 25 },
     }),
     {
       rootMargin: "-27% 0%",

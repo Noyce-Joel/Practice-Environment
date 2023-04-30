@@ -148,3 +148,17 @@ body{
   will-change: pathLength;
 }
 
+.snap-type{
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  transition: 2000ms ease-in-out;
+  will-change: scroll-position;
+}
+.snap-align{
+  scroll-snap-align: center;
+}
+
+.height{
+  height: 100vh
+}
