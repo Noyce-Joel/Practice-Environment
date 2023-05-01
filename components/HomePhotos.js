@@ -14,7 +14,9 @@ import {
 } from "framer-motion";
 import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 
+
 function HomePhotos() {
+  
   const [open, setOpen] = useState(false);
     const [show, setShow] = useState(true)
   const springApi = useSpringRef();

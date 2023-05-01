@@ -10,13 +10,16 @@ import {
 } from "@react-spring/web";
 import data from "/components/data";
 import {
-  motion,
+  motion
 } from "framer-motion";
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+import Berlin from "./Berlin";
+
+
 
 function HomePage() {
+   
   const [open, setOpen] = useState(false);
-    const [show, setShow] = useState(true)
+   
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
@@ -28,6 +31,7 @@ function HomePage() {
       background: open ? "white" : "rgb(168, 117, 117)",
     },
   });
+  
 
   const transApi = useSpringRef();
   const transition = useTransition(open ? data : [], {
@@ -42,6 +46,8 @@ function HomePage() {
     0,
     open ? 0.1 : 0.55,
   ]);
+  
+  
 
   const [ref, springs] = useInView(
     () => ({
@@ -64,7 +70,7 @@ function HomePage() {
     <motion.div className="wrapper">
         
       
-
+    
       <animated.div
         ref={ref}
         style={{ ...springs, ...rest, width: size, height: size }}
@@ -79,7 +85,8 @@ function HomePage() {
         ))}
 
       </animated.div>
-
+      
+      
     </motion.div>
   );
 }

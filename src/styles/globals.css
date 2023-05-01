@@ -33,7 +33,7 @@ body{
 
   grid-gap: 25px;
   padding: 25px;
-  margin-top: 70px;
+  margin-top: 60px;
   background: white;
   border-radius: 20px;
   cursor: pointer;
@@ -97,6 +97,7 @@ body{
   will-change: transform, opacity;
   transition: 120ms ease-out;
   padding: 20px;
+  
 }
 
 .item:hover {
@@ -136,8 +137,8 @@ body{
 .title {
   display: flex;
   margin-top: -10px;
-  font-weight: 900;
-  font-size: calc(14px);
+  font-weight: 200;
+  font-size: calc(34px);
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
@@ -161,4 +162,70 @@ body{
 
 .height{
   height: 100vh
+}
+
+.date{
+  display: flex;
+  font-size: calc(45px);
+  color: black;
+  margin-left: 100px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right:0;
+  bottom: 0; 
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.berlin{
+  display: flex;
+ height: 99vh;
+  width: 99vw;
+  position: relative;
+  margin-top: -400px;
+
+
+}
+.hello{
+  display: flex;
+  font-size: calc(90px);
+  margin-top: 40px
+}
+
+.words{
+  display: flex;
+  position: relative;
+  object-position: cover;
+  height: 700px;
+  width: 700px;
+}
+
+@media screen and (max-width: 600px){
+
+  .title-wrap {
+    display: flex;
+    z-index: 99;
+    position: fixed;
+    top: 0
+    
+    
+  }
+  
+  .title {
+    display: flex;
+    margin-top: -10px;
+    font-weight: 200;
+    font-size: calc(12px);
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+    padding-inline: 50px;
+    padding: 20px;
+    gap: 0.78rem;
+    z-index: 99;
+    will-change: pathLength;
+  }
 }
