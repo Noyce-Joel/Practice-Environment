@@ -54,7 +54,7 @@ const Text1 = (props) => {
       ref={ref} style={{ ...springy}}
       className='text'
     >
-     I'm a massive great big gorgeous, loved up, lovely love who would love for you to keep scrolling to see more of my loveableness and amazing art borne out of my incredible lovliness. He needs me, he needs me, he needs me, he needs me, oh, how he needs me. I'm also extremely cute but you mustn't go on about it! Hehehe
+     I am a massive great big gorgeous, loved up, lovely love who would love for you to keep scrolling to see more of my loveableness and amazing art borne out of my incredible lovliness. He needs me, he needs me, he needs me, he needs me, oh, how he needs me. I am also extremely cute but you must not go on about it! Hehehe
     </animated.div>
     </div>
   );
