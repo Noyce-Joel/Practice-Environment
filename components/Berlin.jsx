@@ -1,21 +1,29 @@
-import {motion, useScroll, useTransform} from "framer-motion";
-import React, { useRef } from "react";
-import { useParallax } from "react-scroll-parallax";
-import Words from 'components/Words'
+import {motion, useMotionValue, useScroll, useSpring, useTransform} from "framer-motion";
+import React, { useEffect, useRef } from "react";
+import Text from "./Text";
+
 
 const Berlin = (props) => {
   const { scrollYProgress } = useScroll();
   
   const scroll = useTransform(
     scrollYProgress, 
-    [0,190],
-    [0, 2200]
+    [0, 70],
+    [0, 645]
   )
-  
+  const x = useMotionValue(0)
+const spring = useSpring(x, {stiffness: 0, mass: 70})
+
+useEffect(() => {
+  x.set(scrollYProgress)
+}, [scrollYProgress])
   
   return (
     <div>
-    <motion.svg
+      <Text />
+    <div 
+    >
+    <svg
       id="Layer_1"
       version="1.1"
       viewBox="0 0 2606.071 889.698"
@@ -26,9 +34,10 @@ const Berlin = (props) => {
       className="berlin"
       fill='none'
       stroke="#000000"
-      strokeWidth='7px'
+      strokeWidth='4.5px'
       strokeLinecap="join"
-     autoReverse='true'
+     
+     
     >
       
       <g>
@@ -36,7 +45,7 @@ const Berlin = (props) => {
       <motion.path
                
                style={{pathLength: scroll}}
-               whileInView={{pathLength: 1}}
+               
                 
           d="M2271.016,16.165v0.05c-0.514,0.069-1.016,0.274-1.533,0.594v42.777l-0.299,2.228l-0.395,82.879l-1.288,9.358l0.249,71.346&#xD;&#xA;&#x9;&#x9;l-0.644,7.229v16.636l-1.855,9.676h-11.839v3.946h1.974v49.324h-1.974l-0.862,3.646c-12.544,6.745-21.092,20.019-21.092,35.252&#xD;&#xA;&#x9;&#x9;c0,18.228,13.158,33.249,29.846,38.048c-0.023,2.272,0.023,3.646,0,5.919h-3.944v5.919h3.944v1.973h-3.944v5.919h3.944&#xD;&#xA;&#x9;&#x9;c-1.541,128.435-7.616,259.124-12.023,387.26c-0.058-0.084,10.686-0.081,21.736-0.05h0.199c11.053-0.031,21.797-0.034,21.736,0.05&#xD;&#xA;&#x9;&#x9;c-4.408-128.155-10.375-258.844-11.916-387.26h3.944v-5.919h-3.944v-1.973h3.944v-5.919h-3.944c-0.023-2.273,0.023-3.647,0-5.919&#xD;&#xA;&#x9;&#x9;c16.691-4.8,29.742-19.821,29.742-38.048c0-15.233-8.547-28.507-21.096-35.252l-0.755-3.646h-1.974v-49.324h1.974v-3.946h-11.839&#xD;&#xA;&#x9;&#x9;l-1.958-9.676v-16.636l-0.644-7.229l0.245-71.346l-1.288-9.358l-0.395-82.879l-0.295-2.228V16.808&#xD;&#xA;&#x9;&#x9;c-0.521-0.32-1.023-0.525-1.537-0.594v-0.05c-0.015,0.001-0.035-0.001-0.05,0c-0.031-0.003-0.065,0.002-0.1,0&#xD;&#xA;&#x9;&#x9;C2271.05,16.164,2271.03,16.166,2271.016,16.165L2271.016,16.165z"
         />
@@ -117,8 +126,9 @@ const Berlin = (props) => {
         />
         
       </g>
-    </motion.svg>
+    </svg>
     
+    </div>
     </div>
   );
 };

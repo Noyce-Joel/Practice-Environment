@@ -9,17 +9,12 @@ import {
   useInView,
 } from "@react-spring/web";
 import data from "/components/data";
-import {
-  motion
-} from "framer-motion";
+import { motion } from "framer-motion";
 import Berlin from "./Berlin";
 
-
-
 function HomePage() {
-   
   const [open, setOpen] = useState(false);
-   
+
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
@@ -31,7 +26,6 @@ function HomePage() {
       background: open ? "white" : "rgb(168, 117, 117)",
     },
   });
-  
 
   const transApi = useSpringRef();
   const transition = useTransition(open ? data : [], {
@@ -46,8 +40,6 @@ function HomePage() {
     0,
     open ? 0.1 : 0.55,
   ]);
-  
-  
 
   const [ref, springs] = useInView(
     () => ({
@@ -65,28 +57,20 @@ function HomePage() {
   );
 
   return (
-    
-    
     <motion.div className="wrapper">
-        
-      
-    
       <animated.div
         ref={ref}
         style={{ ...springs, ...rest, width: size, height: size }}
         className="container"
-        onClick={() => setOpen((open) => !open)}>
-
+        onClick={() => setOpen((open) => !open)}
+      >
         {transition((style, item) => (
           <animated.div
             className="item"
             style={{ ...style, background: item.css }}
           />
         ))}
-
       </animated.div>
-      
-      
     </motion.div>
   );
 }

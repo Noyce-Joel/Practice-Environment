@@ -25,11 +25,11 @@ body{
 .container {
   display: grid;
   grid-template-areas:
-    "a a b b"
-    "c d b b"
-    "e f g h"
-    "i i j k"
-    "i i l k";
+    "a b c c"
+    "d e c c"
+    "f g h i"
+    "j j k l"
+    "j j m n";
 
   grid-gap: 25px;
   padding: 25px;
@@ -40,6 +40,7 @@ body{
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: scroll scale, width, height;
   transition: ease-in-out;
+  z-index: 0;
 }
 
 .btn {
@@ -185,25 +186,45 @@ body{
  height: 99vh;
   width: 99vw;
   position: relative;
-  margin-top: -400px;
+  margin-top: 20px;
+  margin-bottom: -200px;
 
 
 }
-.hello{
-  display: flex;
-  font-size: calc(90px);
-  margin-top: 40px
-}
 
-.words{
+
+.text{
   display: flex;
   position: relative;
-  object-position: cover;
-  height: 700px;
-  width: 700px;
+  height: 50vh;
+  width: 50vw;
+  z-index: 0;
+  margin-top: 50px;
+  margin-bottom: -700px;
+  letter-spacing: 5px;
+  word-spacing: 4px;
+  padding-left: 70px
+  
+}
+.text-h1{
+  display: flex;
+  position: relative;
+  height: 50vh;
+  width: 50vw;
+  z-index: 0;
+  margin-top: 90px;
+  margin-bottom: -420px;
+  letter-spacing: 5px;
+  word-spacing: 4px;
+  padding-left: 70px;
+  font-size: calc(35px);
+  font-weight: 900;
+  
 }
 
-@media screen and (max-width: 600px){
+
+
+@media screen and (max-width: 750px){
 
   .title-wrap {
     display: flex;
@@ -228,4 +249,54 @@ body{
     z-index: 99;
     will-change: pathLength;
   }
+  .container {
+    display: grid;
+    grid-template-areas:
+      "a a b b"
+      "c d b b"
+      "e f g h"
+      "i i j k"
+      "i i l k";
+  
+    grid-gap: 25px;
+    padding: 25px;
+    margin-top: 60px;
+    background: white;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+    will-change: scroll scale, width, height;
+    transition: ease-in-out;
+
+  }
+  .text{
+    display: flex;
+    position: relative;
+    height: 50vh;
+    width: 60vw;
+    z-index: 0;
+    margin-top: 50px;
+    margin-bottom: -600px;
+    letter-spacing: 5px;
+    word-spacing: 4px;
+    padding-left: 70px;
+    font-size: calc(12px);
+    
+  }
+  .text-h1{
+    display: flex;
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    z-index: 0;
+    margin-top: 90px;
+    margin-bottom: -450px;
+    letter-spacing: 5px;
+    word-spacing: 4px;
+    padding-left: 70px;
+    font-size: calc(25px);
+    font-weight: 900;
+    
+  }
+  
 }

@@ -1,12 +1,10 @@
 import Head from "next/head";
 import HomePage from "components/HomePage";
 import Flower from "components/Flower.jsx";
-import Title from "components/Title";
 import Berlin from "../../components/Berlin";
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
 import HomePhotos from "../../components/HomePhotos";
 import { useEffect, useState } from "react";
-import Date from "../../components/Date";
+import Text from 'components/Text'
 
 export default function Home() {
   const [scroll, setScroll] = useState(null);
@@ -15,7 +13,7 @@ export default function Home() {
     const loadScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       setScroll(
-        new LocomotiveScroll({ smooth: true, lerp: 0.05, multiplier: 0.7 })
+        new LocomotiveScroll({ smooth: true, lerp: 0.05, multiplier: 0.2 })
       );
     };
 
@@ -34,13 +32,13 @@ export default function Home() {
         <div data-scroll>
           <HomePage />
         </div>
+       
         <div data-scroll>
           <Berlin />
         </div>
         <div data-scroll>
           <HomePhotos />
         </div>
-        
         <div data-scroll>
           <HomePage />
         </div>
