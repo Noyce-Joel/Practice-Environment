@@ -41,6 +41,9 @@ export default function Home() {
         <div data-scroll>
           <HomePhotos />
         </div>
+        <div data-scroll>
+          <HomePage />
+        </div>
         
       </div>
     </div>
