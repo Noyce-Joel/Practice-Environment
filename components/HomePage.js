@@ -10,7 +10,6 @@ import {
 } from "@react-spring/web";
 import data from "/components/data";
 import { motion } from "framer-motion";
-import Heading from 'components/Heading'
 
 function HomePage() {
   const [open, setOpen] = useState(false);
@@ -19,11 +18,10 @@ function HomePage() {
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.stiff,
-    from: { x: -125, size: "40%"},
+    from: { x: -125, size: "40%" },
     to: {
       x: open ? 0 : -125,
-      size: open ? "92%" : "40%"
-      
+      size: open ? "92%" : "40%",
     },
   });
 
@@ -58,7 +56,6 @@ function HomePage() {
 
   return (
     <motion.div className="wrapper">
-      
       <animated.div
         ref={ref}
         style={{ ...springs, ...rest, width: size, height: size }}
@@ -72,7 +69,6 @@ function HomePage() {
           />
         ))}
       </animated.div>
-      
     </motion.div>
   );
 }

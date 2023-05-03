@@ -1,14 +1,5 @@
 import React, { useState } from "react";
-import {
-  useTransition,
-  useSpring,
-  useChain,
-  config,
-  animated,
-  useSpringRef,
-  useInView,
-} from "@react-spring/web";
-import data from "/components/data";
+import { animated, useInView } from "@react-spring/web";
 import { motion } from "framer-motion";
 import Heading from "components/Heading";
 
