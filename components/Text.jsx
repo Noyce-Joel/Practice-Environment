@@ -15,7 +15,7 @@ const Text1 = (props) => {
     }),
     {
       rootMargin: "0% 0%",
-      once: true,
+      
     }
   );
 
@@ -31,7 +31,7 @@ const Text1 = (props) => {
     }),
     {
       rootMargin: "0% 0%",
-      once: true,
+      
     }
   );
 

@@ -21,6 +21,7 @@ function HomePage() {
 
   return (
     <motion.div className="wrapper2">
+      <video></video>
       <animated.div
         ref={ref}
         style={{ ...springs }}

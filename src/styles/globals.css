@@ -1,6 +1,6 @@
 main {
   scroll-behavior: smooth;
-  scrollbar-width: 0px;
+  
 }
 
 body {
@@ -12,7 +12,7 @@ body {
 
 .wrapper {
   height: 95vh;
-  width: 95vw;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,7 +52,7 @@ body {
   position: relative;
   margin-top: 60px;
   border-radius: 20px;
-  margin-left: -150px;
+  margin-left: -400px;
   will-change: width, height;
   background-image: url("/Hero.jpg");
   background-position: center;
@@ -120,7 +120,7 @@ body {
 }
 
 .item:hover {
-  scale: 1.025;
+  scale: 0.95;
   z-index: 99;
   transition: 200ms ease-in;
 }
@@ -169,6 +169,7 @@ body {
   display: flex;
   position: relative;
   margin-bottom: -200px;
+  overflow-x: hidden
 }
 
 .text {
@@ -223,6 +224,7 @@ body {
 
   .title {
     font-size: calc(12px);
+    font-weight: bold
   }
 
   .container {
