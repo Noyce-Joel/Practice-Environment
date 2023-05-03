@@ -9,7 +9,7 @@ const Berlin = (props) => {
   const scroll = useTransform(
     scrollYProgress, 
     [0, 70],
-    [0, 645]
+    [0, 155]
   )
   const x = useMotionValue(0)
 const spring = useSpring({stiffness: 0, mass: 70})
@@ -17,6 +17,8 @@ const spring = useSpring({stiffness: 0, mass: 70})
 useEffect(() => {
   x.set(scrollYProgress)
 }, [scrollYProgress])
+
+
   
   return (
     <div>

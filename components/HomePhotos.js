@@ -12,7 +12,7 @@ import data from "/components/data";
 import {
   motion,
 } from "framer-motion";
-import { IParallax, Parallax, ParallaxLayer } from "@react-spring/parallax";
+
 
 
 function HomePhotos() {

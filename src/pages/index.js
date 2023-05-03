@@ -4,7 +4,6 @@ import Flower from "components/Flower.jsx";
 import Berlin from "../../components/Berlin";
 import HomePhotos from "../../components/HomePhotos";
 import { useEffect, useState } from "react";
-import Text from 'components/Text'
 
 export default function Home() {
   const [scroll, setScroll] = useState(null);
@@ -19,6 +18,8 @@ export default function Home() {
 
     loadScroll();
   }, []);
+
+
   return (
     <div data-scroll-container className="height">
       <Head>
@@ -27,6 +28,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      
       <Flower />
       <div data-scroll-section>
         <div data-scroll>
@@ -39,18 +41,7 @@ export default function Home() {
         <div data-scroll>
           <HomePhotos />
         </div>
-        <div data-scroll>
-          <HomePage />
-        </div>
-        <div data-scroll>
-          <HomePhotos />
-        </div>
-        <div data-scroll>
-          <HomePage />
-        </div>
-        <div data-scroll>
-          <HomePhotos />
-        </div>
+        
       </div>
     </div>
   );

@@ -2,25 +2,24 @@ main {
   scroll-behavior: smooth;
   
 }
-body{
+body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-
+    background-image: url(/White.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: white;
   }
 
 .wrapper {
   height: 95vh;
+  width: 95vw;
   gap: 20rem;
-  background: '';
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   
 }
-
-
-
 
 .container {
   display: grid;
@@ -30,18 +29,21 @@ body{
     "f g h i"
     "j j k l"
     "j j m n";
-
   grid-gap: 25px;
   padding: 25px;
   margin-top: 60px;
   background: white;
   border-radius: 20px;
-  cursor: pointer;
   box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
   will-change: scroll scale, width, height;
   transition: ease-in-out;
   z-index: 0;
+  background-image: url('/Hero.jpg');
+  background-position: center;
+  background-size: cover;
 }
+
+
 
 .btn {
   border: none;
@@ -98,7 +100,6 @@ body{
   will-change: transform, opacity;
   transition: 120ms ease-out;
   padding: 20px;
-  
 }
 
 .item:hover {
@@ -130,9 +131,7 @@ body{
   display: flex;
   z-index: 99;
   position: fixed;
-  top: 0
-  
-  
+  top: 0;
 }
 
 .title {
@@ -150,22 +149,23 @@ body{
   will-change: pathLength;
 }
 
-.snap-type{
+.snap-type {
   height: 100vh;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   transition: 2000ms ease-in-out;
   will-change: scroll-position;
 }
-.snap-align{
+.snap-align {
   scroll-snap-align: center;
 }
 
-.height{
-  height: 100vh
+.height {
+  height: 100vh;
+  width: 100vw;
 }
 
-.date{
+.date {
   display: flex;
   font-size: calc(45px);
   color: black;
@@ -173,27 +173,22 @@ body{
   position: absolute;
   top: 0px;
   left: 0;
-  right:0;
-  bottom: 0; 
+  right: 0;
+  bottom: 0;
   justify-content: center;
   align-items: center;
-  
-  
 }
 
-.berlin{
+.berlin {
   display: flex;
- height: 99vh;
+  height: 99vh;
   width: 99vw;
   position: relative;
   margin-top: 20px;
   margin-bottom: -200px;
-
-
 }
 
-
-.text{
+.text {
   display: flex;
   position: relative;
   height: 50vh;
@@ -203,10 +198,9 @@ body{
   margin-bottom: -700px;
   letter-spacing: 5px;
   word-spacing: 4px;
-  padding-left: 70px
-  
+  padding-left: 70px;
 }
-.text-h1{
+.text-h1 {
   display: flex;
   position: relative;
   height: 50vh;
@@ -219,22 +213,33 @@ body{
   padding-left: 70px;
   font-size: calc(35px);
   font-weight: 900;
+}
+.heading {
+  display: flex;
+  position: relative;
+  margin-left: -400px;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  font-size: calc(45px);
+  background-color: white;
+ 
   
 }
+.h1 {
+  display: flex;
+  height: 45px;
+  overflow-y: hidden;
+}
 
-
-
-@media screen and (max-width: 750px){
-
+@media screen and (max-width: 750px) {
   .title-wrap {
     display: flex;
     z-index: 99;
     position: fixed;
-    top: 0
-    
-    
+    top: 0;
   }
-  
+
   .title {
     display: flex;
     margin-top: -10px;
@@ -257,19 +262,18 @@ body{
       "e f g h"
       "i i j k"
       "i i l k";
-  
+
     grid-gap: 25px;
     padding: 25px;
     margin-top: 60px;
     background: white;
     border-radius: 20px;
-    cursor: pointer;
+
     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
     will-change: scroll scale, width, height;
     transition: ease-in-out;
-
   }
-  .text{
+  .text {
     display: flex;
     position: relative;
     height: 50vh;
@@ -281,9 +285,8 @@ body{
     word-spacing: 4px;
     padding-left: 70px;
     font-size: calc(12px);
-    
   }
-  .text-h1{
+  .text-h1 {
     display: flex;
     position: relative;
     height: 50vh;
@@ -296,7 +299,21 @@ body{
     padding-left: 70px;
     font-size: calc(25px);
     font-weight: 900;
-    
   }
-  
+  .heading{
+    font-size: calc(25px)
+  }
+  .h1{
+    height: calc(25px)
+  }
+@media screen and (max-height: 860px){
+  .text{
+    margin-top: 170px;
+  }
+
+  .berlin{
+    margin-top: 220px
+  }
+}
+
 }
