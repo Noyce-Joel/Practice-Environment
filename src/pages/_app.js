@@ -18,14 +18,16 @@ export default function App({ Component, pageProps }) {
     outerScale={0.7}
     outerAlpha={10}
     hasBlendMode={true}
+
     outerStyle={{
       mixBlendMode: 'difference',
+      
       
     }}
     innerStyle={{
       mixBlendMode: 'difference',
-      
     }}
+    
     
     />
   <Component {...pageProps} />

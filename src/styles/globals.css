@@ -1,13 +1,12 @@
 main {
   scroll-behavior: smooth;
-  
+  scrollbar-width: 0px;
 }
+
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    background-image: url(/White.jpg);
-    background-position: center;
-    background-size: cover;
+    
     background-color: white;
   }
 
@@ -29,8 +28,53 @@ body {
     "f g h i"
     "j j k l"
     "j j m n";
-  grid-gap: 25px;
-  padding: 25px;
+  grid-gap: 5px;
+  padding: 5px;
+  margin-top: 60px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+  will-change: scroll scale, width, height;
+  transition: ease-in-out;
+  z-index: 10;
+  background-image: url('/Cool2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.wrapper2 {
+  height: 95vh;
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px
+}
+
+.container2 {
+  height: 40vh;
+  width: 40vw;
+  position: relative;
+  margin-top: 60px;
+  border-radius: 20px;
+  margin-left: -150px;
+  box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+  will-change: scroll scale, width, height;
+  transition: ease-in-out;
+  z-index: 10;
+  background-image: url('/Hero.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.container-II {
+  display: grid;
+  grid-template-areas:
+    "a b c c"
+    "d e c c"
+    "f g h i"
+    "j j k l"
+    "j j m n";
+  grid-gap: 5px;
+  padding: 5px;
   margin-top: 60px;
   background: white;
   border-radius: 20px;
@@ -38,7 +82,7 @@ body {
   will-change: scroll scale, width, height;
   transition: ease-in-out;
   z-index: 0;
-  background-image: url('/Hero.jpg');
+  background-image: url('/Cool.jpg');
   background-position: center;
   background-size: cover;
 }
@@ -181,11 +225,17 @@ body {
 
 .berlin {
   display: flex;
-  height: 99vh;
-  width: 99vw;
+  width: 60vw;
+  height: 95vh;
+  margin-top: 90px;
+  margin-left: -200px
+}
+.berlin-flex{
+  display: flex;
   position: relative;
-  margin-top: 20px;
+  
   margin-bottom: -200px;
+  
 }
 
 .text {
@@ -217,12 +267,13 @@ body {
 .heading {
   display: flex;
   position: relative;
-  margin-left: -400px;
+  margin-left: 0px;
   justify-content: center;
   align-items: center;
   overflow-y: hidden;
   font-size: calc(45px);
   background-color: white;
+  z-index: 0;
  
   
 }
@@ -232,6 +283,8 @@ body {
   overflow-y: hidden;
 }
 
+
+
 @media screen and (max-width: 750px) {
   .title-wrap {
     display: flex;
@@ -239,7 +292,20 @@ body {
     position: fixed;
     top: 0;
   }
+  .berlin-flex{
+display: flex;
+flex-direction: column;
+position: relative;
+margin-bottom: -250px
+  }
+  .berlin{
+   display: flex;
+   position: relative;
+    width: 95vw;
+    margin-left: 15px;
 
+  }
+  
   .title {
     display: flex;
     margin-top: -10px;
@@ -268,7 +334,30 @@ body {
     margin-top: 60px;
     background: white;
     border-radius: 20px;
+    background-image: url('/Cool2.jpg');
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
+    will-change: scroll scale, width, height;
+    transition: ease-in-out;
+  }
+  .container2 {
+    display: grid;
+    grid-template-areas:
+      "a a b b"
+      "c d b b"
+      "e f g h"
+      "i i j k"
+      "i i l k";
 
+    grid-gap: 25px;
+    padding: 25px;
+    margin-top: 60px;
+    background: white;
+    border-radius: 20px;
+    background-image: url('/Hero.jpg');
+    background-position: center;
+    background-size: cover;
     box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.05);
     will-change: scroll scale, width, height;
     transition: ease-in-out;

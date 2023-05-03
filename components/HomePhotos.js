@@ -9,25 +9,19 @@ import {
   useInView,
 } from "@react-spring/web";
 import data from "/components/data";
-import {
-  motion,
-} from "framer-motion";
-
-
+import { motion } from "framer-motion";
 
 function HomePhotos() {
-  
   const [open, setOpen] = useState(false);
-    const [show, setShow] = useState(true)
+  const [show, setShow] = useState(true);
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.stiff,
-    from: { x: 125, size: "40%", background: "rgb(168, 117, 117)" },
+    from: { x: 125, size: "40%" },
     to: {
       x: open ? 0 : 125,
       size: open ? "92%" : "40%",
-      background: open ? "white" : "rgb(168, 117, 117)",
     },
   });
 
@@ -61,27 +55,20 @@ function HomePhotos() {
   );
 
   return (
-    
-    
     <motion.div className="wrapper">
-        
-      
-
       <animated.div
         ref={ref}
         style={{ ...springs, ...rest, width: size, height: size }}
-        className="container"
-        onClick={() => setOpen((open) => !open)}>
-
+        className="container-II"
+        onClick={() => setOpen((open) => !open)}
+      >
         {transition((style, item) => (
           <animated.div
             className="item"
             style={{ ...style, background: item.css }}
           />
         ))}
-
       </animated.div>
-
     </motion.div>
   );
 }

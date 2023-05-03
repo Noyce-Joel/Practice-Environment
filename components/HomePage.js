@@ -72,10 +72,7 @@ function HomePage() {
           />
         ))}
       </animated.div>
-      <div className="heading">
-      <Heading />
       
-      </div>
     </motion.div>
   );
 }

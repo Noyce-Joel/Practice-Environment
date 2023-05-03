@@ -1,10 +1,11 @@
 import Head from "next/head";
+import HomePage2 from "components/HomePage2";
 import HomePage from "components/HomePage";
 import Flower from "components/Flower.jsx";
 import Berlin from "../../components/Berlin";
 import HomePhotos from "../../components/HomePhotos";
 import { useEffect, useState } from "react";
-
+import Text from "../../components/Text";
 export default function Home() {
   const [scroll, setScroll] = useState(null);
 
@@ -32,14 +33,18 @@ export default function Home() {
       <Flower />
       <div data-scroll-section>
         <div data-scroll>
-          <HomePage />
+          <HomePage2 />
         </div>
+       
        
         <div data-scroll>
           <Berlin />
         </div>
         <div data-scroll>
           <HomePhotos />
+        </div>
+        <div data-scroll>
+          <HomePage />
         </div>
         
         
