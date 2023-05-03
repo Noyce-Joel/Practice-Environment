@@ -8,7 +8,7 @@ const Berlin = (props) => {
   
   const scroll = useTransform(
     scrollYProgress, 
-    [0, 0.42],
+    [0, 0.27],
     [0, 1]
   )
   
