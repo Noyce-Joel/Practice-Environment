@@ -1,3 +1,4 @@
+
 main {
   scroll-behavior: smooth;
   
@@ -8,10 +9,35 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
   background-color: white;
+  overflow-x: hidden;
+  
+}
+.smile-wrap {
+  display: flex;
+  position: absolute;
+  top: 0px;
+  right: -100px;
+  padding: 20px;
+  z-index: 999;
+
+  
+ 
+}
+.smile{
+  border-radius: 50%;
+  display:flex;
+  width: 250pt;
+  height: 250pt;
+  
+}
+.smile video{
+  object-fit: cover;
+  
+  
 }
 
 .wrapper {
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -28,13 +54,7 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-areas:
-    "a b c c"
-    "d e c c"
-    "f g h i"
-    "j j k l"
-    "j j m n";
+  overflow: scroll;
   grid-gap: 5px;
   padding: 5px;
   margin-top: 60px;
@@ -52,21 +72,15 @@ body {
   position: relative;
   margin-top: 60px;
   border-radius: 20px;
-  margin-left: -400px;
+  margin-left: -150px;
   will-change: width, height;
   background-image: url("/Hero.jpg");
   background-position: center;
   background-size: cover;
 }
 .container-II {
-  display: grid;
-  grid-template-areas:
-    "a b c c"
-    "d e c c"
-    "f g h i"
-    "j j k l"
-    "j j m n";
-  grid-gap: 5px;
+  display: flex;
+  overflow-x: scroll;
   padding: 5px;
   margin-top: 60px;
   background: white;
@@ -75,10 +89,21 @@ body {
   background-image: url("/Cool.jpg");
   background-position: center;
   background-size: cover;
+  background-clip: content-box;
+}
+
+.item {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 5px;
+  will-change: transform, opacity;
+  transition: 120ms ease-out;
+  padding: 20px;
 }
 
 .item:nth-of-type(1) {
-  grid-area: a;
+  display: flex;
 }
 .item:nth-of-type(2) {
   grid-area: b;
@@ -109,24 +134,6 @@ body {
 }
 .item:nth-of-type(11) {
   grid-area: k;
-}
-
-.item {
-  background: white;
-  border-radius: 5px;
-  will-change: transform, opacity;
-  transition: 120ms ease-out;
-  padding: 20px;
-}
-
-.item:hover {
-  scale: 0.95;
-  z-index: 99;
-  transition: 200ms ease-in;
-}
-
-.item:active {
-  scale: 0.99;
 }
 
 .flower {
@@ -160,26 +167,25 @@ body {
 
 .berlin {
   display: flex;
-  width: 60vw;
-  height: 95vh;
+  position: relative;
   margin-top: 90px;
-  margin-left: -200px;
+  width: 150vw;
+  height: 25vh;
+  
+  
 }
 .berlin-flex {
   display: flex;
-  position: relative;
-  margin-bottom: -200px;
-  overflow-x: hidden
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh
 }
 
 .text {
   display: flex;
   position: relative;
-  height: 50vh;
   width: 50vw;
   z-index: 0;
-  margin-top: 50px;
-  margin-bottom: -700px;
   letter-spacing: 5px;
   word-spacing: 4px;
   padding-left: 70px;
@@ -187,11 +193,9 @@ body {
 .text-h1 {
   display: flex;
   position: relative;
-  height: 50vh;
-  width: 50vw;
   z-index: 0;
   margin-top: 90px;
-  margin-bottom: -420px;
+  margin-bottom: 70px;
   letter-spacing: 5px;
   word-spacing: 4px;
   padding-left: 70px;
@@ -212,19 +216,12 @@ body {
 }
 
 @media screen and (max-width: 750px) {
-  .berlin-flex {
-    flex-direction: column;
-  }
-  .berlin {
-    display: flex;
-    position: relative;
-    width: 95vw;
-    margin-left: 15px;
-  }
+ 
+  
 
   .title {
     font-size: calc(12px);
-    font-weight: bold
+    font-weight: bold;
   }
 
   .container {
@@ -238,7 +235,6 @@ body {
   }
 
   .text-h1 {
-    margin-bottom: -450px;
     font-size: calc(25px);
   }
 
@@ -248,13 +244,23 @@ body {
   .h1 {
     height: calc(25px);
   }
-  @media screen and (max-height: 860px) {
-    .text {
-      margin-top: 170px;
-    }
 
-    .berlin {
-      margin-top: 220px;
-    }
+  .smile{
+    width: 75pt;
+    height: 75pt;
+  }
+  .smile-wrap{
+    top: 70px;
+    right: 40px
+  }
+
+}
+@media screen and (max-width: 1200px){
+  .berlin {
+    display: flex;
+    position: relative;
+    width: 95vw;
+    margin-left: 10px;
   }
 }
+ 

@@ -65,7 +65,7 @@ function HomePhotos() {
         {transition((style, item) => (
           <animated.div
             className="item"
-            style={{ ...style, background: item.css }}
+            style={{ ...style}}
           />
         ))}
       </animated.div>

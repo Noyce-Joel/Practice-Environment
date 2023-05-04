@@ -3,6 +3,7 @@ import { animated, useInView } from "@react-spring/web";
 import { motion } from "framer-motion";
 import Heading from "components/Heading";
 
+
 function HomePage() {
   const [ref, springs] = useInView(
     () => ({
@@ -21,7 +22,7 @@ function HomePage() {
 
   return (
     <motion.div className="wrapper2">
-      <video></video>
+    
       <animated.div
         ref={ref}
         style={{ ...springs }}

@@ -4,13 +4,7 @@ import { useScroll } from "framer-motion";
 
 const Elements22 = (props) => {
 
-  const { scrollYProgress } = useScroll();
   
-  const scroll = useTransform(
-    scrollYProgress, 
-    [0, 1290],
-    [0, 100]
-  )
   return (
     <svg
     className='flower'
@@ -22,7 +16,7 @@ const Elements22 = (props) => {
     >
       <defs />
       <motion.path
-      style={{pathLength: scroll}}
+      
         id="Path0"
         d="M416.78,144.02c-1-7.72-3.43-15.33-6.78-22.94c-3.56,2.57-5.54,5.67-7.3,9.02c-8.23,15.68-19.48,29.24-32.37,40.99
 			c-14.27,12.99-28.07,26.44-41.46,40.24c-19.52,20.13-32.85,43.77-36.79,72.13c-2.53,18.22-4.72,36.51-5.72,54.82
