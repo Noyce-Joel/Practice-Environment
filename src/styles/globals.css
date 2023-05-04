@@ -18,7 +18,7 @@ body {
   top: 0px;
   right: -100px;
   padding: 20px;
-  z-index: 999;
+  z-index: 9999;
 
   
  
@@ -140,13 +140,13 @@ body {
   display: flex;
   position: fixed;
   bottom: 0;
-  right: calc(-20px);
+  right: calc(-15px);
   margin-bottom: 40px;
 }
 
 .title-wrap {
   display: flex;
-  z-index: 99;
+  z-index: 999;
   position: fixed;
   top: 0;
 }
@@ -162,7 +162,7 @@ body {
   padding-inline: 50px;
   padding: 20px;
   gap: 0.78rem;
-  z-index: 99;
+  z-index: 9999;
 }
 
 .berlin {
@@ -244,15 +244,14 @@ body {
   .h1 {
     height: calc(25px);
   }
-
-  .smile{
-    width: 75pt;
-    height: 75pt;
-  }
   .smile-wrap{
-    top: 70px;
-    right: 40px
+    z-index: 0;
   }
+  .smile{
+    width: 185pt;
+    height: 185pt;
+  }
+  
 
 }
 @media screen and (max-width: 1200px){
