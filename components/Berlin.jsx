@@ -18,7 +18,7 @@ const Berlin = (props) => {
   return (
     <div className="berlin-flex">
       <Text />
-    
+     
     <svg
       id="Layer_1"
       version="1.1"

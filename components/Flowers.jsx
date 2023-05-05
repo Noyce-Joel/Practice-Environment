@@ -10,7 +10,7 @@ const FlowersSVGCutFile = (props) => {
         enableBackground: "new 0 0 432 432",
         fill: "none",
         stroke: "#000000",
-        strokeWidth: '4px', transitionDuration: 10
+        strokeWidth: '3.5px', transitionDuration: 10
       }}
       version="1.1"
       viewBox="0 0 432 432"

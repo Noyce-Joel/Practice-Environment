@@ -10,19 +10,7 @@ import Smile from "../../components/Smile";
 
 
 export default function Home() {
-  const [scroll, setScroll] = useState(null);
-
-  useEffect(() => {
-    const loadScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      setScroll(
-        new LocomotiveScroll({ smooth: true, multiplier: 0.2 })
-      );
-    };
-
-    loadScroll();
-  }, []);
-
+  
 
   return (
     <div data-scroll-container>

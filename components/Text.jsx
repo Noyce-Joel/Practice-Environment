@@ -35,11 +35,13 @@ const Text1 = (props) => {
     }
   );
 
+  
   return (
     <div>
       <animated.div ref={refH1} style={{ ...springier }} className="text-h1">
         BERLIN
       </animated.div>
+      
       <animated.div ref={ref} style={{ ...springy }} className="text">
         I am a massive great big gorgeous, loved up, lovely love who would love
         for you to keep scrolling to see more of my loveableness and amazing art
