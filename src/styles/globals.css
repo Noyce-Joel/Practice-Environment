@@ -29,7 +29,7 @@ body {
 .smile-wrap {
   display: flex;
   position: absolute;
-  top: 0px;
+  top:0px;
   right: 0px;
   padding-inline: 30px;
   padding-top: 20px;
@@ -215,7 +215,7 @@ body {
   z-index: 0;
   letter-spacing: 5px;
   word-spacing: 4px;
-  padding-left: 100px;
+
   padding-bottom: 50px;
 }
 .text-h2 {
@@ -226,7 +226,7 @@ body {
   margin-bottom: 70px;
   letter-spacing: 5px;
   word-spacing: 4px;
-  padding-left: 100px;
+  
   font-size: calc(30px);
   font-weight: 900;
 }

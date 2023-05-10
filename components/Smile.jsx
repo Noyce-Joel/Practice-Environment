@@ -13,7 +13,7 @@ function Smile() {
     }}
     className='smile-wrap'>
         <div className='smile'>
-        <video className='smile' autoPlay loop muted src='/Smile.mp4'/>
+        <video className='smile' autoPlay loop muted src='/Colours.mp4'/>
        
         </div>
     </motion.div>

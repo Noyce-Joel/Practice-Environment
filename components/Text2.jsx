@@ -22,7 +22,7 @@ const Text1 = (props) => {
   const [refH1, springier] = useInView(
     () => ({
       from: {
-        x: 150,
+        x: 250,
       },
       to: {
         x: 0,

@@ -5,6 +5,7 @@ import React, { Suspense, useRef } from 'react'
 import { useInView } from 'react-spring';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import Text2 from '../components/Text2'
+
 function Hero() {
   
 
@@ -17,14 +18,15 @@ function Hero() {
     const rotation = useTransform(
         scrollYProgress,
         [0, 1],
-        [0, 2]
+        [0, 1.5],
+        
     );
 
-    useFrame(() => {
+    useFrame((state, delta, xrFrame) => {
         ref.current.rotation.y = rotation.get();
     });
 
-    return <primitive object={gltf.scene} scale={15} ref={ref} />;
+    return <primitive object={gltf.scene} scale={15.5} ref={ref} />;
 };
 
   return (

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import Flowers from "./Flowers"
+import Smile from "./Smile"
 
 
 
@@ -24,7 +25,7 @@ export default function MyComponent() {
    <motion.div className='h1' initial={{y:200}} animate={{y:0}} transition={{duration: 1.2, delay: 1.6, type: "tween"}}>PORTFOLIO</motion.div>
    
    </div>
- 
+    <Smile />
    </div>
   )
 }
