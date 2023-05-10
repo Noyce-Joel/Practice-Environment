@@ -1,8 +1,20 @@
-import { motion } from 'framer-motion'
+import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'framer-motion'
 import React from 'react'
 
 function Smile() {
- 
+  const { scrollYProgress } = useScroll();
+  
+  const scroll = useTransform(
+    scrollYProgress,
+    [0,1],
+    [1, 20],
+  )
+  const scale = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
     <motion.div 
     initial={{scale: 0}}
@@ -14,10 +26,10 @@ function Smile() {
     }}
     
     className='smile-wrap'>
-        <div className='smile'>
+        <motion.div style={{scale, y: scroll, scale: scroll}} className='smile'>
         <video className='smile' autoPlay muted src='/Colours.mp4'/>
        
-        </div>
+        </motion.div>
     </motion.div>
   )
 }
