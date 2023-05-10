@@ -1,14 +1,10 @@
 import Head from "next/head";
 import HomePage2 from "components/HomePage2";
-import HomePage from "components/HomePage";
+
 import Flower from "components/Flower.jsx";
 import Berlin from "../../components/Berlin";
 import HomePhotos from "../../components/HomePhotos";
-import { useEffect, useState } from "react";
-import Text from "../../components/Text";
-import Smile from "../../components/Smile";
 import Title from "../../components/Title";
-import { Canvas } from "@react-three/fiber";
 import Hero from "../../components/Hero";
 
 export default function Home() {
@@ -39,9 +35,7 @@ export default function Home() {
         <div data-scroll>
           <HomePhotos />
         </div>
-        <div data-scroll>
-          <HomePage />
-        </div>
+        
       </div>
     </div>
   );

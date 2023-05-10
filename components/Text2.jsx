@@ -22,7 +22,7 @@ const Text1 = (props) => {
   const [refH1, springier] = useInView(
     () => ({
       from: {
-        x: 250,
+        x: 25,
       },
       to: {
         x: 0,
@@ -39,7 +39,7 @@ const Text1 = (props) => {
   return (
     <div>
       <animated.div ref={refH1} style={{ ...springier }} className="text-h2">
-       WATER COLOURS
+       PAINTING
       </animated.div>
       
       <animated.div ref={ref} style={{ ...springy }} className="text2">

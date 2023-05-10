@@ -50,8 +50,8 @@ body {
 }
 
 .wrapper {
-  height: 95vh;
-  width: 95vw;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,21 +64,6 @@ body {
   align-items: center;
   justify-content: center;
   gap: 40px;
-}
-
-.container {
-  overflow: scroll;
-  grid-gap: 5px;
-  padding: 5px;
-  margin-top: 60px;
-  background: white;
-  border-radius: 20px;
-  will-change: width, height;
-  background-image: url("/Cool2.jpg");
-  background-position: center;
-  background-size: cover;
-  border-style: double;
-  box-shadow: "0,0,0,100";
 }
 
 .container2 {
@@ -104,26 +89,26 @@ body {
 
 .container-II {
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(4, minmax(2px, 1fr));
   background: white;
   border-radius: 20px;
   will-change: width, height;
   background-image: url("/Cool.jpg");
   background-position: center;
   background-size: cover;
-  justify-content: center;
-  align-items: center
+  
   
 }
 
 .item {
   display: flex;
-  width: 80%;
-  height: 80%;
-  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  grid-gap: 1rem;
+  
   will-change: transform, opacity;
   transition: 120ms ease-out;
-  
+  position: relative;
   justify-content: center;
   align-items: center
 }
@@ -219,7 +204,7 @@ body {
   z-index: 0;
   letter-spacing: 5px;
   word-spacing: 4px;
-
+  overflow-x: hidden;
   padding-bottom: 50px;
 }
 .text-h2 {
@@ -290,9 +275,21 @@ body {
   .smile-wrap {
     z-index: 0;
   }
-  .smile {
-    width: 185pt;
-    height: 185pt;
+  .smile{
+    margin-left: 20px;
+    width: 35pt;
+    height: 35pt
+  }
+  .box-container{
+    flex-direction: column;
+    width: 100vw
+  }
+  .box{
+    width: 500px;
+    height: 500px
+  }
+  .text2{
+    width: 60vw
   }
 }
 @media screen and (max-width: 1200px) {

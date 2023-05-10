@@ -39,7 +39,7 @@ const Text1 = (props) => {
   return (
     <div>
       <animated.div ref={refH1} style={{ ...springier }} className="text-h1">
-        BERLIN
+        DRAWING
       </animated.div>
       
       <animated.div ref={ref} style={{ ...springy }} className="text">

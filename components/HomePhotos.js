@@ -13,15 +13,14 @@ import { motion } from "framer-motion";
 
 function HomePhotos() {
   const [open, setOpen] = useState(false);
-  const [show, setShow] = useState(true);
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.stiff,
-    from: { x: 125, size: "40%" },
+    from: {  size: "40%" },
     to: {
-      x: open ? 0 : 125,
-      size: open ? "100%" : "40%",
+      
+      size: open ? "90%" : "40%",
     },
   });
 
