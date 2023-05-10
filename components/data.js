@@ -4,7 +4,7 @@
     name: 'Rare Wind',
     description: '#a8edea → #fed6e3',
     css: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-    height: 200,
+    height: 400,
   },
   {
     name: 'Saint Petersburg',
@@ -40,7 +40,7 @@
     name: 'Wild Apple',
     description: '#d299c2 → #fef9d7',
     css: 'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
-    height: 200,
+    height: 400,
   },
   {
     name: 'Ladoga Bottom',
@@ -52,7 +52,7 @@
     name: 'Sunny Morning',
     description: '#f6d365 → #fda085',
     css: 'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
-    height: 200,
+    height: 400,
   },
   {
     name: 'Lemon Gate',
@@ -71,7 +71,7 @@
     name: 'Japan Blush',
     description: ' #ddd6f3 → #faaca8',
     css: 'linear-gradient(135deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%)',
-    height: 200,
+    height: 400,
   },
   
 ]

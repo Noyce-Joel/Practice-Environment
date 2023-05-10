@@ -42,8 +42,8 @@ function Title() {
   ];
   return (
     <div className="title-wrap">
-        <Flowers />
-    <div className="title">
+        
+    <div className="title ">
       
         {name.map((item, index) => (
             <motion.span
@@ -57,7 +57,7 @@ function Title() {
                 </motion.span>
         ))}
         
-      
+        
       
     </div>
     

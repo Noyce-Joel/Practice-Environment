@@ -8,9 +8,10 @@ import {
   useSpringRef,
   useInView,
 } from "@react-spring/web";
-import data from "/components/data";
+
 import { motion } from "framer-motion";
 import Heading from '../components/Heading'
+
 
 function HomePage() {
   const [open, setOpen] = useState(false);
@@ -18,7 +19,7 @@ function HomePage() {
   const springApi = useSpringRef();
   const { size, ...rest } = useSpring({
     ref: springApi,
-    config: config.stiff,
+    config: config.gentle,
     from: {x: -70, size: "40%", width: '40vw' },
     to: {
       width: open ? '25vw' : '40vw',
@@ -27,16 +28,9 @@ function HomePage() {
     },
   });
 
-  const transApi = useSpringRef();
-  const transition = useTransition(open ? data : [], {
-    ref: transApi,
-    trail: 400 / data.length,
-    from: { opacity: 0, scale: 0 },
-    enter: { opacity: 1, scale: 1 },
-    leave: { opacity: 0, scale: 0 },
-  });
-
-  useChain(open ? [springApi, transApi] : [transApi, springApi], [
+  
+  
+  useChain(open ? [springApi, springApi] : [springApi, springApi], [
     0,
     open ? 0.1 : 0.55,
   ]);
@@ -57,29 +51,36 @@ function HomePage() {
   );
   return (
     <motion.div className="wrapper2">
-    <div className="scroll">
+      
+    <motion.div 
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    className="scroll">
       <span>s</span>
       <span>c</span>
       <span>r</span>
       <span>o</span>
       <span>l</span>
       <span>l</span>
-       
-        </div>
+      
+        </motion.div>
+        
       <animated.div
         ref={ref}
         style={{ ...springs, height: size, wdith: size, ...rest }}
         className="container2"
         onClick={() => setOpen((open) => !open)}
       >
-       
+        
 
       </animated.div>
       
         
       <div className="heading">
         <Heading />
+       
       </div>
+     
     </motion.div>
   );
 }

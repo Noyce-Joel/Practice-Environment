@@ -21,7 +21,7 @@ function HomePhotos() {
     from: { x: 125, size: "40%" },
     to: {
       x: open ? 0 : 125,
-      size: open ? "92%" : "40%",
+      size: open ? "100%" : "40%",
     },
   });
 
@@ -65,7 +65,7 @@ function HomePhotos() {
         {transition((style, item) => (
           <animated.div
             className="item"
-            style={{ ...style}}
+            style={{ ...style, background: item.css}}
           />
         ))}
       </animated.div>
