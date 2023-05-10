@@ -8,19 +8,23 @@ body {
   background-color: white;
   overflow-x: hidden;
 }
-.box{
-  display: flex;
-  width: 50vw;
-  height: 150vh
-  
-}
+
 .box-container{
   display: flex;
   justify-content: center;
   align-items: center;
   
   
+  
 }
+.box{
+  display: flex;
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  
+}
+
 .box-text{
   display: flex;
   width: 50vw;

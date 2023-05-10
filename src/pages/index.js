@@ -33,7 +33,7 @@ export default function Home() {
         <div data-scroll>
           <Berlin />
         </div>
-        <div className="box" data-scroll>
+        <div data-scroll>
           <Hero />
         </div>
         <div data-scroll>
