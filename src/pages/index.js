@@ -6,6 +6,7 @@ import Berlin from "../../components/Berlin";
 import HomePhotos from "../../components/HomePhotos";
 import Title from "../../components/Title";
 import Hero from "../../components/Hero";
+import Smile from "../../components/Smile";
 
 export default function Home() {
   return (
@@ -16,8 +17,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     
-      <Flower />
+    
+      <Smile/>
+    <Flower />
       <div className="title-container">
         <Title />
       </div>
@@ -25,12 +27,18 @@ export default function Home() {
         <div data-scroll>
           <HomePage2 />
         </div>
-
+        
         <div data-scroll>
           <Berlin />
         </div>
+        <div className="line-wrap">
+        <div className="line"/>
+        </div>
         <div data-scroll>
           <Hero />
+        </div>
+        <div className="line-wrap">
+        <div className="line"/>
         </div>
         <div data-scroll>
           <HomePhotos />

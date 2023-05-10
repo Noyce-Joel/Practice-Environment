@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 
 function Smile() {
+ 
   return (
     <motion.div 
     initial={{scale: 0}}
@@ -11,9 +12,10 @@ function Smile() {
       duration: 2,
       type: 'spring'
     }}
+    
     className='smile-wrap'>
         <div className='smile'>
-        <video className='smile' autoPlay loop muted src='/Colours.mp4'/>
+        <video className='smile' autoPlay muted src='/Colours.mp4'/>
        
         </div>
     </motion.div>

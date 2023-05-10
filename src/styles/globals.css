@@ -1,5 +1,6 @@
 main {
   scroll-behavior: smooth;
+  overflow: hidden
 }
 
 body {
@@ -9,41 +10,38 @@ body {
   overflow-x: hidden;
 }
 
-.box-container{
+.box-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  
-  
+  gap: 10rem;
+  width: 90vw;
+  height: 90vh;
 }
-.box{
+.box {
   display: flex;
   position: relative;
-  width: 1000px;
-  height: 1000px;
-  
+  width: 500pt;
+  height: 500pt;
+  left: 100px
 }
 
-.box-text{
-  display: flex;
-  width: 50vw;
-  padding-bottom: 100px;
-}
+
 .smile-wrap {
   display: flex;
-  position: absolute;
-  top:0px;
+  position: fixed;
+  top: 0px;
   right: 0px;
   padding-inline: 30px;
   padding-top: 20px;
-  z-index: 9999;
+  z-index: -9999;
 }
 .smile {
   border-radius: 50%;
   display: flex;
   width: 50pt;
   height: 50pt;
+  
 }
 .smile video {
   object-fit: cover;
@@ -55,6 +53,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: -100px
 }
 
 .wrapper2 {
@@ -70,13 +69,27 @@ body {
   height: 40vh;
   width: 40vw;
   position: relative;
-  margin-top: 60px;
+  margin-top: 0px;
   border-radius: 20px;
   margin-left: -150px;
   will-change: width, height;
   background-image: url("/Hero.jpg");
   background-position: center;
   background-size: cover;
+}
+.line-wrap{
+  display: flex;
+  position: relative;
+  width: 100vw;
+  justify-content: center;
+  
+  margin-bottom: 150px;
+}
+.line{
+  display: flex;
+  border-style: solid;
+  width: 100pt;
+  opacity: 0.2;
 }
 .scroll {
   display: flex;
@@ -96,8 +109,6 @@ body {
   background-image: url("/Cool.jpg");
   background-position: center;
   background-size: cover;
-  
-  
 }
 
 .item {
@@ -105,23 +116,23 @@ body {
   width: 100%;
   height: 100%;
   grid-gap: 1rem;
-  
+
   will-change: transform, opacity;
   transition: 120ms ease-out;
   position: relative;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
-
-
-
-.flower {
+.flower{
   display: flex;
   position: fixed;
   bottom: 0;
-  right: calc(-15px);
-  margin-bottom: 40px;
+  right: 0;
+  justify-content: flex-end;
+  margin-right: -20px;
+  margin-bottom: 20px
 }
+
 .flowers {
   display: flex;
   position: relative;
@@ -131,10 +142,8 @@ body {
 
 .title-wrap {
   display: flex;
-  z-index: -20;
+  
   position: fixed;
-  
-  
 }
 
 .title {
@@ -144,28 +153,24 @@ body {
   overflow-y: hidden;
   padding: 40px;
   gap: 0.78rem;
-  mix-blend-mode: exclusion;
- 
+  
   height: 40px;
- 
+
   top: 0;
   bottom: 0;
-
 }
-.title-container{
+.title-container {
   position: fixed;
   display: flex;
-  
-  z-index: 99999;
-  
-}
 
+  z-index: 99;
+}
 
 .berlin {
   display: flex;
   position: relative;
   margin-top: 90px;
-  width: 150vw;
+  width: 120vw;
   height: 25vh;
 }
 .berlin-flex {
@@ -174,6 +179,8 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
+  padding: 120px;
+  margin-bottom: -100px
 }
 
 .text {
@@ -205,17 +212,18 @@ body {
   letter-spacing: 5px;
   word-spacing: 4px;
   overflow-x: hidden;
-  padding-bottom: 50px;
+  padding-bottom: 150px;
+  
+
 }
 .text-h2 {
   display: flex;
   position: relative;
   z-index: 0;
-  margin-top: 90px;
+  margin-top: 0px;
   margin-bottom: 70px;
   letter-spacing: 5px;
   word-spacing: 4px;
-  
   font-size: calc(30px);
   font-weight: 900;
 }
@@ -237,14 +245,18 @@ body {
   overflow-y: hidden;
   font-size: calc(45px);
   background-color: inherit;
+  top: 45px
 }
 .h1 {
   display: flex;
-  height: 45px;
+  height: 50px;
   overflow-y: hidden;
 }
 
 @media screen and (max-width: 750px) {
+  body {
+    overflow-x: hidden;
+  }
   .title {
     font-size: calc(12px);
     font-weight: bold;
@@ -255,7 +267,9 @@ body {
     padding: 25px;
     will-change: width, height;
   }
-
+  .container2{
+    margin-left: 0px
+  }
   .text {
     font-size: calc(12px);
     padding-left: 70px;
@@ -275,21 +289,31 @@ body {
   .smile-wrap {
     z-index: 0;
   }
-  .smile{
+  .smile {
     margin-left: 20px;
     width: 35pt;
-    height: 35pt
+    height: 35pt;
   }
-  .box-container{
+  .box-container {
     flex-direction: column;
-    width: 100vw
+    width: 100vw;
+    margin-top: 300px;
   }
-  .box{
-    width: 500px;
-    height: 500px
+
+  .text2 {
+    width: 60vw;
   }
-  .text2{
-    width: 60vw
+  .box-container {
+    height: 100vh;
+    
+  }
+  .box {
+    width: 400px;
+    height: 400px;
+    left: 0px
+  }
+  .scroll{
+    visibility: hidden;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -298,6 +322,9 @@ body {
     position: relative;
     width: 95vw;
     margin-left: 10px;
+  }
+  .berlin-flex{
+    padding: 0px
   }
   .scroll {
     left: 10vw;

@@ -10,25 +10,20 @@ function Hero() {
   
 
 
-  const Model = () => {
-    const gltf = useLoader(GLTFLoader, "/painting.glb");
-    const ref = useRef();
-    const { scrollYProgress } = useScroll();
-
-    const rotation = useTransform(
-        scrollYProgress,
-        [0, 1],
-        [0, 1.2],
-        
-    );
-
-    useFrame((state, delta, xrFrame) => {
-        ref.current.rotation.y = rotation.get();
-    });
-
-    return <primitive object={gltf.scene} scale={15.5} ref={ref} />;
-};
-
+const Model = () => {
+  const gltf = useLoader(GLTFLoader, './painting.glb');
+  const ref = useRef();
+  const {scrollYProgress} = useScroll();
+  const rotation = useTransform(
+    scrollYProgress,
+    [0, 1.1],
+    [0, 1.7]
+  )
+  useFrame((state, delta, xrframe) => {
+    ref.current.rotation.y = rotation.get()
+  })
+  return <primitive object={gltf.scene} scale={17.5} ref={ref} />
+}
   return (
     <div className='box-container'>
     <div className='box'>
@@ -36,7 +31,7 @@ function Hero() {
         <Canvas>
             
         <Suspense fallback={null}>
-            <OrbitControls enableZoom={false}/>
+            
           <Model />
         </Suspense>
       </Canvas>

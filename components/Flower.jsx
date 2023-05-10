@@ -13,7 +13,7 @@ const Elements22 = (props) => {
   )
   return (
     <svg
-    className='flower'
+	className="flower"
       height="75pt"
       width="75pt"
       version="1.1"

@@ -20,7 +20,7 @@ function HomePage() {
   const { size, ...rest } = useSpring({
     ref: springApi,
     config: config.gentle,
-    from: {x: -70, size: "40%", width: '40vw' },
+    from: {x: 0, size: "40%", width: '40vw' },
     to: {
       width: open ? '25vw' : '40vw',
       x: open ? 0 : -70,
@@ -70,6 +70,7 @@ function HomePage() {
         style={{ ...springs, height: size, wdith: size, ...rest }}
         className="container2"
         onClick={() => setOpen((open) => !open)}
+        
       >
         
 
