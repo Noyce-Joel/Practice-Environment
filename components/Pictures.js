@@ -8,7 +8,7 @@ import {
   Image as ImageImpl,
   Backdrop,
 } from "@react-three/drei";
-
+import Heading from '../components/Heading'
 function Image({...props}){
     const ref = useRef();
     return(
@@ -60,7 +60,7 @@ export default function Pictures() {
           </Scroll>
           <Scroll html>
             <div  className="overlay">
-                MY LOVE
+                <Heading />
             </div>
           </Scroll>
          
