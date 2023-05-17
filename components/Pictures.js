@@ -9,6 +9,7 @@ import {
   Backdrop,
 } from "@react-three/drei";
 import Heading from '../components/Heading'
+import Berlin from "../components/Berlin";
 function Image({...props}){
     const ref = useRef();
     return(
@@ -60,7 +61,8 @@ export default function Pictures() {
           </Scroll>
           <Scroll html>
             <div  className="overlay">
-                <Heading />
+               <h1 className="overlay"><Heading /></h1> 
+               
             </div>
           </Scroll>
          

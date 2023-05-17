@@ -18,7 +18,7 @@ body {
   position: absolute;
   justify-content: flex-end;
   align-items: flex-start;
-  padding-top: 100px;
+  padding-top: -100px;
   font-size: calc(70px);
 }
 
@@ -232,6 +232,7 @@ body {
   margin-bottom: -100px
 }
 
+
 .text {
   display: flex;
   position: relative;
@@ -294,7 +295,7 @@ body {
   overflow-y: hidden;
   font-size: calc(45px);
   background-color: inherit;
-  top: 45px
+  
 }
 .h1 {
   display: flex;
