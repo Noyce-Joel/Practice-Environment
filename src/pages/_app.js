@@ -1,7 +1,7 @@
 import '@/styles/globals.css'
 import Layout from '/components/Layout'
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false
@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
     const loadScroll = async () => {
       const LocomotiveScroll = (await import("locomotive-scroll")).default;
       setScroll(
-        new LocomotiveScroll({ smooth: true, multiplier: 0.2 })
+        new LocomotiveScroll({ smooth: true, multiplier: 0.1 })
       );
     };
 
@@ -46,6 +46,5 @@ export default function App({ Component, pageProps }) {
     />
   <Component {...pageProps} />
   </Layout>
-  
   </>
 }

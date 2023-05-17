@@ -3,13 +3,15 @@ import HomePage2 from "components/HomePage2";
 
 import Flower from "components/Flower.jsx";
 import Berlin from "../../components/Berlin";
-import HomePhotos from "../../components/HomePhotos";
+
 import Title from "../../components/Title";
 import Hero from "../../components/Hero";
 import Smile from "../../components/Smile";
 
+
 export default function Home() {
   return (
+    
     <div data-scroll-container>
       <Head>
         <title>Create Next App</title>
@@ -19,14 +21,14 @@ export default function Home() {
       </Head>
     
       <Smile/>
+     
     <Flower />
-      <div className="title-container">
-        <Title />
-      </div>
+      
       <div data-scroll-section>
-        <div data-scroll>
+      <div data-scroll>
           <HomePage2 />
         </div>
+      
         
         <div data-scroll>
           <Berlin />
@@ -40,9 +42,7 @@ export default function Home() {
         <div className="line-wrap">
         <div className="line"/>
         </div>
-        <div data-scroll>
-          <HomePhotos />
-        </div>
+        
         
       </div>
     </div>

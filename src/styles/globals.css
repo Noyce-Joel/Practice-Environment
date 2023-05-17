@@ -8,7 +8,11 @@ body {
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   background-color: white;
   overflow-x: hidden;
+  
+  
 }
+
+
 
 .box-container {
   display: flex;
@@ -29,21 +33,30 @@ body {
 
 .smile-wrap {
   display: flex;
+  
   position: fixed;
-  top: 0px;
-  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
   padding-inline: 30px;
-  padding-top: 20px;
+  padding-top: 0px;
+  padding-left: 85px;
   z-index: -9999;
+  
 }
 .smile {
   border-radius: 50%;
   display: flex;
-  width: 50pt;
-  height: 50pt;
+  width: 70px;
+  height: 70px;
+  object-fit: none;
+  
   
 }
+
 .smile video {
+  
   object-fit: cover;
 }
 
@@ -57,12 +70,15 @@ body {
 }
 
 .wrapper2 {
-  height: 95vh;
-  width: 95vw;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
+  
+  z-index: -9999;
+  
 }
 
 .container2 {
@@ -99,7 +115,18 @@ body {
   font-size: calc(15px);
   text-transform: uppercase;
 }
-
+.icons{
+  display: flex;
+  gap: 1rem;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.icon{
+  display: flex;
+  height: 10px;
+  width: 10px;
+  scale: 0.7
+}
 .container-II {
   display: grid;
   grid-template-columns: repeat(4, minmax(2px, 1fr));
@@ -288,9 +315,11 @@ body {
   }
   .smile-wrap {
     z-index: 0;
+    padding-inline: 0px;
+    padding-right: 20px;
   }
   .smile {
-    margin-left: 20px;
+    margin-right: 5px;
     width: 35pt;
     height: 35pt;
   }
@@ -310,7 +339,7 @@ body {
   .box {
     width: 400px;
     height: 400px;
-    left: 0px
+    left: 0px;
   }
   .scroll{
     visibility: hidden;
