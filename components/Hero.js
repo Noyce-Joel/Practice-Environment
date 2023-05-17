@@ -36,9 +36,7 @@ const Model = () => {
         </Suspense>
       </Canvas>
     </div>
-    <div className='box-text'>
-      <Text2 />
-    </div>
+  
     </div>
   )
 }

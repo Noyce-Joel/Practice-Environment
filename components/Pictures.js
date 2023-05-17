@@ -6,6 +6,7 @@ import {
   Scroll,
   useScroll,
   Image as ImageImpl,
+  Backdrop,
 } from "@react-three/drei";
 
 function Image({...props}){
@@ -52,7 +53,8 @@ export default function Pictures() {
     
     <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
      <Suspense fallback={null} >
-        <ScrollControls  damping={1} pages={3}>
+        <ScrollControls  damping={1} mass={2} pages={3}>
+           
           <Scroll>
             <Images />
           </Scroll>
