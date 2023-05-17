@@ -11,7 +11,16 @@ body {
   
   
 }
-
+.overlay{
+  display: flex;
+  width: 90vw;
+  height: 100vh;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 200px;
+  font-size: calc(70px);
+}
 
 
 .box-container {
@@ -30,6 +39,13 @@ body {
   left: 100px
 }
 
+.pictures{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  direction: ltr;
+  overflow: hidden
+}
 
 .smile-wrap {
   display: flex;
@@ -45,7 +61,13 @@ body {
   z-index: -9999;
   
 }
+.sticky{
+  position: sticky;
+}
 .smile {
+  
+  object-fit: cover;
+  background-size: 70px;
   border-radius: 50%;
   display: flex;
   width: 70px;

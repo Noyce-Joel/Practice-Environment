@@ -7,6 +7,7 @@ import Berlin from "../../components/Berlin";
 import Title from "../../components/Title";
 import Hero from "../../components/Hero";
 import Smile from "../../components/Smile";
+import Pictures from "../../components/Pictures";
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
     <Flower />
       
       <div data-scroll-section>
+        
       <div data-scroll>
           <HomePage2 />
         </div>
@@ -42,6 +44,7 @@ export default function Home() {
         <div className="line-wrap">
         <div className="line"/>
         </div>
+        
         
         
       </div>

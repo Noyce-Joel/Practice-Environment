@@ -6,6 +6,7 @@ import {
 
 import { motion, spring } from "framer-motion";
 import Heading from '../components/Heading'
+import Link from "next/link";
 
 
 function HomePage() {
@@ -39,7 +40,7 @@ function HomePage() {
         
       <div className="heading">
         <Heading />
-       
+        <Link href='/Gallery'> Gallery</Link>
       </div>
      
     </div>

@@ -8,18 +8,18 @@ const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
 });
 
 export default function App({ Component, pageProps }) {
-  const [scroll, setScroll] = useState(null);
+  // const [scroll, setScroll] = useState(null);
 
-  useEffect(() => {
-    const loadScroll = async () => {
-      const LocomotiveScroll = (await import("locomotive-scroll")).default;
-      setScroll(
-        new LocomotiveScroll({ smooth: true, multiplier: 0.1 })
-      );
-    };
+  // useEffect(() => {
+  //   const loadScroll = async () => {
+  //     const LocomotiveScroll = (await import("locomotive-scroll")).default;
+  //     setScroll(
+  //       new LocomotiveScroll({ smooth: true, multiplier: 0.1 })
+  //     );
+  //   };
 
-    loadScroll();
-  }, []);
+  //   loadScroll();
+  // }, []);
 
   return <>
   
